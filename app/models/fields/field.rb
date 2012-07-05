@@ -61,7 +61,8 @@ class Field < ActiveRecord::Base
     'datetime'    => :timestamp,
     'decimal'     => [:decimal, {:precision => 15, :scale => 2}],
     'integer'     => :integer,
-    'float'       => :float
+    'float'       => :float,
+    'file'       => :string
   }
 
   validates_presence_of :label, :message => "^Please enter a Field label."

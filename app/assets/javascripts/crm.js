@@ -322,6 +322,7 @@ var crm = {
 
   //----------------------------------------------------------------------------
   flick: function(element, action) {
+	console.log('please');
     if ($(element)) {
       switch(action) {
         case "show":   $(element).show();     break;

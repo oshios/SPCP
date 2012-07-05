@@ -55,7 +55,6 @@ class ContactsController < EntitiesController
         respond_to_related_not_found(model) and return
       end
     end
-
     respond_with(@contact)
   end
 

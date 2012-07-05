@@ -264,6 +264,7 @@ en-US:
   born_on: Born on
   reports_to: Reports to
   access: Access
+  poop: Hello Big Poop Man
 
   # Views -> Authenticate.
   #----------------------------------------------------------------------------
@@ -858,3 +859,4 @@ en-US:
     decimal:     Number (Decimal)
     integer:     Number (Integer)
     float:       Number (Floating Point)
+    file:        Image
