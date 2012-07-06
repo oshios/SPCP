@@ -1,0 +1,7 @@
+= simple_form_for(@equipment, :html => one_submit_only(:contact), :remote => true) do |f|
+  = link_to_close new_equipment_path
+
+  .buttonbar
+    = f.submit t(:create_contact), :onclick => "crm.create_contact()"
+    #{t :or}
+    = link_to_cancel new_contact_path

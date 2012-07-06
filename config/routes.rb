@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :lists
 
   root :to => 'home#index'
@@ -20,6 +21,7 @@ Rails.application.routes.draw do
   resources :comments
   resources :emails
   resources :passwords
+  resources :equipment
 
   resources :accounts, :id => /\d+/ do
     collection do
