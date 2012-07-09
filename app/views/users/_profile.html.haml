@@ -57,6 +57,29 @@
           %td
             .label #{t :skype}:
             = f.text_field :skype, :style => "width:112px"
+    .subtitle #{t :location_info}
+    .section
+      %table
+        %tr
+          %td{ :colspan => 3 }
+            .label.req #{t :street}:
+            = f.text_field :street
+          %td= spacer
+          %td{ :colspan => 3 }
+            .label.req #{t :city}:
+            = f.text_field :city
+        %tr
+          %td{ :colspan => 3 }
+            .label.req #{t :province}:
+            = f.text_field :province
+          %td= spacer
+          %td
+            .label.req #{t :postal}:
+            = f.text_field :postal, :style => "width:112px"
+          %td= spacer
+          %td{ :colspan => 3 }
+            .label.req #{t :country}:
+            = f.country_select(:country, nil, { :"Select a country" => "" }, {:"data-placeholder" => t(:select_a_country), :style => "width:150px; margin-top:6px"})
 
     .buttonbar
       = f.submit t :save_profile

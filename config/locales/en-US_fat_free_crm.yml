@@ -22,6 +22,7 @@ en-US:
   tab_leads: Leads
   tab_accounts: Accounts
   tab_contacts: Contacts
+  tab_equipment: Equipment
   tab_opportunities: Opportunities
 
   admin_tab_users: Users
@@ -233,6 +234,7 @@ en-US:
   change_password: Change Password
   company: Company
   contact_info: Contact Information
+  location_info: Location Information
   current_password: Current password
   edit_profile: Edit Profile
   # email: Email # <-- Already defined as the task type if Settings.
@@ -264,7 +266,11 @@ en-US:
   born_on: Born on
   reports_to: Reports to
   access: Access
-  poop: Hello Big Poop Man
+  city: City
+  province: Province
+  postal: Postal Code
+  street: Street
+  username_or_email: Email or Username
 
   # Views -> Authenticate.
   #----------------------------------------------------------------------------
@@ -351,10 +357,12 @@ en-US:
   blog: Website/Blog
   contact: Contact
   contact_small: contact
-  contacts: Contacts
+  contacts: Contact
   contacts_options: Contacts Options
   contacts_small: contacts
-  create_contact: Create Contact
+  create_contact: Add Contact
+  create_equipment: Add equipment
+  equipment: Equipment
   department: Department
   department_small: '%{value} department'
   do_not_call: Do not call
@@ -570,6 +578,8 @@ en-US:
   collapse_all: Collapse all
   expanded: Expanded
   collapsed: Collapsed
+  link: Link
+  age: Age
 
   # Views -> Layout.
   #----------------------------------------------------------------------------
@@ -860,3 +870,7 @@ en-US:
     integer:     Number (Integer)
     float:       Number (Floating Point)
     file:        Image
+    
+  # Some I will define
+  mine:
+    link:       link

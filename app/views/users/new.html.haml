@@ -14,6 +14,19 @@
       = f.password_field :password
       .label #{t :password_confirmation}:
       = f.password_field :password_confirmation
+    .subtitle #{t :location_info}
+    .section
+      .label.req #{t :street}:
+      = f.text_field :street
+      .label.req #{t :city}:
+      = f.text_field :city
+      .label.req #{t :province}:
+      = f.text_field :province
+      .label.req #{t :postal}:
+      = f.text_field :postal, :style => "width:112px"
+      <br />
+      .label.req #{t :country}: 
+      = f.country_select(:country, nil, { :"Select a country" => "" }, {:"data-placeholder" => t(:select_a_country), :style => "width:150px; margin-top:6px"})
 
     .buttonbar
       = f.submit t(:sign_up_button)

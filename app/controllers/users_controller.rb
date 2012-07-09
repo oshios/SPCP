@@ -75,6 +75,7 @@ class UsersController < ApplicationController
   # PUT /users/1.xml                                                       AJAX
   #----------------------------------------------------------------------------
   def update
+    puts params
     @user.update_attributes(params[:user])
     respond_with(@user)
   end

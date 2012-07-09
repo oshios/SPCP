@@ -10,7 +10,7 @@ if @contact.valid?
   else
     page[:recently].replace :partial => "shared/recently"
   end
-  page.call "crm.flick", :empty, :remove
+  # page.call "crm.flick", :empty, :remove
 else
   page[:create_contact].replace_html :partial => "new"
   page.call "crm.init_chosen_fields"

@@ -88,6 +88,7 @@ var crm = {
 
   //----------------------------------------------------------------------------
   flip_form: function(id) {
+	console.log(id);
     if ($(id)) {
       if (Element.visible(id)) {
         this.hide_form(id);
@@ -96,6 +97,10 @@ var crm = {
       }
     }
   },
+
+	al: function() {
+		alert("poop");
+	},
 
   //----------------------------------------------------------------------------
   set_title: function(id, caption) {
@@ -322,7 +327,8 @@ var crm = {
 
   //----------------------------------------------------------------------------
   flick: function(element, action) {
-	console.log('please');
+	console.log("flicking");
+	console.log(element);
     if ($(element)) {
       switch(action) {
         case "show":   $(element).show();     break;

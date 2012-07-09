@@ -61,6 +61,7 @@ class User < ActiveRecord::Base
   has_many    :avatars                                         # As owner who uploaded it, ex. Contact avatar.
   has_many    :comments, :as => :commentable                   # As owner who crated a comment.
   has_many    :accounts
+  has_many    :equipment
   has_many    :campaigns
   has_many    :leads
   has_many    :contacts
@@ -101,10 +102,16 @@ class User < ActiveRecord::Base
   cattr_accessor :current_user
 
   validates_presence_of :email, :message => :missing_email
+  validates_presence_of :street, :city, :province, :postal, :country
 
   #----------------------------------------------------------------------------
   def name
     self.first_name.blank? ? self.username : self.first_name
+  end
+  
+  def self.find_by_username_or_email(login)
+    puts 'allpoop'
+    find_by_username(login) || find_by_email(login)
   end
 
   #----------------------------------------------------------------------------

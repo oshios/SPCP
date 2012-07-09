@@ -23,6 +23,7 @@ class ContactsController < EntitiesController
   #----------------------------------------------------------------------------
   def index
     @contacts = get_contacts(:page => params[:page])
+    puts 'moose'
     
     respond_with @contacts do |format|
       format.xls { render :layout => 'header' }
@@ -44,10 +45,16 @@ class ContactsController < EntitiesController
   # GET /contacts/new
   #----------------------------------------------------------------------------
   def new
+    puts 'whyyy'
+    puts @contact.name
     @contact.attributes = {:user => current_user, :access => Setting.default_access}
     @account = Account.new(:user => current_user)
+    puts 'not getting'
+    puts @contact
+    puts params
 
     if params[:related]
+      puts 'fuckerssss'
       model, id = params[:related].split('_')
       if related = model.classify.constantize.my.find_by_id(id)
         instance_variable_set("@#{model}", related)

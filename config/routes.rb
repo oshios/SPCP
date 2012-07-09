@@ -22,6 +22,25 @@ Rails.application.routes.draw do
   resources :emails
   resources :passwords
   resources :equipment
+  
+  # resources :equipment, :id => /\d+/ do
+  #   collection do
+  #     get  :advanced_search
+  #     post :filter
+  #     get  :options
+  #     get  :field_group
+  #     post :auto_complete
+  #     post :redraw
+  #     get :versions
+  #   end
+  #   member do
+  #     put  :attach
+  #     post :discard
+  #     post :subscribe
+  #     post :unsubscribe
+  #     get :opportunities
+  #   end
+  # end
 
   resources :accounts, :id => /\d+/ do
     collection do

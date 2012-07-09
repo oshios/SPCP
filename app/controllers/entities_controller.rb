@@ -71,6 +71,9 @@ class EntitiesController < ApplicationController
   #----------------------------------------------------------------------------
   def contacts
   end
+  
+  def equipment
+  end
 
   # GET /entities/leads                                                    AJAX
   #----------------------------------------------------------------------------

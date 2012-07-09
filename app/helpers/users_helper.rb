@@ -29,11 +29,26 @@ module UsersHelper
       %Q[{ name: "#{language}", on_select: function() { #{redraw(:locale, [ locale, language ], url_for(:action => :redraw))} } }]
     end
   end
+  
+  def owner_select(asset, users, myself)
+    puts 'user_select'
+    puts asset
+    puts users
+    puts myself
+    user_options = user_options_for_select(users, myself)
+    select(asset, :user_id, user_options,
+           # { :include_blank => t(:unassigned) },
+           { :style         => "width:160px"  })
+  end
 
   def user_select(asset, users, myself)
+    puts 'user_select'
+    puts asset
+    puts users
+    puts myself
     user_options = user_options_for_select(users, myself)
     select(asset, :assigned_to, user_options,
-           { :include_blank => t(:unassigned) },
+           # { :include_blank => t(:unassigned) },
            { :style         => "width:160px"  })
   end
 
